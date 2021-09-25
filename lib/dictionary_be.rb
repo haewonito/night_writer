@@ -1,4 +1,4 @@
-class Dictionary
+class DictionaryBE
 
   attr_reader :first_line_hash, :second_line_hash, :third_line_hash
 
@@ -25,8 +25,9 @@ class Dictionary
     second_line_array = second_line_string.split(' ')
     third_line_array = third_line_string.split(' ')
 
-    @first_line_hash = make_hash(alphabet_array, first_line_array)
-    @second_line_hash = make_hash(alphabet_array, second_line_array)
-    @third_line_hash = make_hash(alphabet_array, third_line_array)
+    @first_line_hash = make_hash(first_line_array, alphabet_array)
+    require 'pry'; binding.pry
+    @second_line_hash = make_hash(second_line_array, alphabet_array)
+    @third_line_hash = make_hash(third_line_array, alphabet_array)
   end
 end
